@@ -1,0 +1,460 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+/* NAV */
+/* .nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px; 
+  position: fixed;
+  width: 100%;
+  background: rgba(15,23,42,0.7);
+  backdrop-filter: blur(10px);
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+
+/* BUTTON 
+.btn {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  padding: 10px 15px;
+  border-radius: 5px;
+ 
+}
+
+.big {
+  padding: 14px 25px;
+}
+
+/* HERO 
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1588776814627-ec7e4c4f8d9f");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* SECTIONS 
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* GRID 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+/* CARD 
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3, .card p {
+  padding: 10px;
+}
+
+/* ABOUT 
+.about {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+/* TESTIMONIALS 
+.testimonials {
+  background: #020617;
+}
+
+.testimonial {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.testimonial img {
+  width: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* CTA 
+.cta {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+/* WHATSAPP 
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+/* FOOTER 
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+} */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+ line-height: 1.5;
+  background: #111827;
+   overflow-x: hidden;
+  /* background: radial-gradient(circle at top, #0f172a, #020617); */
+}
+/* 🔥 FIX GLOBAL REAL */
+html, body {
+  overflow-x: hidden;
+  
+  font-family: sans-serif;
+  background: #343f71;
+  color: white;
+}
+
+/* 🔥 CONTENEDOR CENTRAL (CLAVE) */
+
+  
+ .container {
+  max-width: 4000px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 5vw, 80px);
+}
+
+
+/* NAV */
+ .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8px 20px;
+
+  /* 🔥 TRANSPARENCIA PRO */
+  background: rgba(10, 10, 30, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  transition: all 0.3s ease;
+}
+  
+.nav h2 {
+  font-size: 20px;
+  font-weight: 600;
+
+  background: linear-gradient(90deg, #c084fc, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav .btn {
+  background: linear-gradient(90deg, #c084fc, #f472b6);
+  padding: 8px 16px;
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+
+.nav .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 100, 200, 0.4);
+}
+
+.nav:hover {
+  box-shadow:
+    0 0 30px rgba(200, 100, 255, 0.3),
+    0 0 60px rgba(255, 100, 200, 0.2);
+}
+
+/* HERO */
+.hero {
+   padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+   padding-top: 150px;
+   border-radius:13px
+}
+
+.hero-box {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* SECCIONES */
+.section {
+  padding: 60px 0;
+  text-align: center;
+    width: 100%;
+}
+
+/* GRID (FIX IMPORTANTE) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%; /* 🔥 evita overflow */
+}
+
+/* IMÁGENES (CLAVE) */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 60px 0;
+  flex-wrap: wrap; /* 🔥 evita que se rompa */
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+
+  margin: 40px 0;
+  border-radius:10px
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  padding: 15px;
+  border-radius: 50%;
+}
+/* responsive */
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
+/* glass effect */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+/* botones pro */
+.btn {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* hero mejorado */
+.hero {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+}
+
+
+/* apple */
+
+.card.apple {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-radius: 20px;
+  padding: 20px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  box-shadow: 
+    0 8px 32px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+
+  transition: all 0.3s ease;
+}
+
+/* glow al hover */
+.card.apple:hover {
+  box-shadow: 
+    0 10px 40px rgba(0, 114, 255, 0.4),
+    0 0 20px rgba(0, 198, 255, 0.3);
+}
+
+/* imagen pro */
+.card.apple img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/* texto */
+.card.apple h3 {
+  margin-bottom: 10px;
+}
+
+.card.apple p {
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+/* hero aactualizado por ia*/
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #020617;
+}
+
+/* glow animado */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(200,100,255,0.4), transparent);
+  top: -100px;
+  left: -100px;
+  filter: blur(120px);
+  animation: moveGlow 10s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 80, 220, 0.7),
+    rgba(255, 120, 200, 0.4),
+    transparent
+  );
+  bottom: -100px;
+  right: -100px;
+  filter: blur(150px);
+  animation: moveGlow2 12s ease-in-out infinite alternate;
+}
+
+@keyframes moveGlow {
+  from { transform: translate(0, 0); }
+  to { transform: translate(100px, 50px); }
+}
+
+@keyframes moveGlow2 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-80px, -60px); }
+}
+
+/* importante */
+.hero-box {
+  position: relative;
+  z-index: 1;
+}
+ 
