@@ -11,6 +11,7 @@ import implantedental from "./assets/implantedental.jpg";
 import limpiezadental from "./assets/limpiezadental.jpg";
 import consultoriodentista from "./assets/consultoriodentista.jpg";
 import consultoriodentista2 from "./assets/consultoriodentista2.jpg";
+import whatsapp4 from "./assets/whatsapp4.jpg";
 
 function App() {
 
@@ -47,7 +48,7 @@ function App() {
       {/* NAV */}
       <nav className="nav">
         <h2>Smile Clinic</h2>
-        <a href="#contact" className="btn">Book Now</a>
+        <a href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20improve%20my%20website" className="btn">Book Now</a>
       </nav>
 
       <div className="container">
@@ -67,7 +68,7 @@ function App() {
             <p>Professional dental care for you and your family</p>
 
             <motion.a
-              href="https://wa.me/5491123456789"
+              href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20improve%20my%20website"
               className="btn big"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -198,7 +199,7 @@ function App() {
           <h2>Need a dental check?</h2>
 
           <motion.a
-            href="https://wa.me/5491123456789"
+            href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20start%20a%20project"
             className="btn big"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -207,10 +208,57 @@ function App() {
           </motion.a>
         </motion.section>
 
- {/* WHATSAPP */}
-      <a href="https://wa.me/5491123456789" className="whatsapp">
-        💬
-      </a>
+
+
+{/*  
+     <a href="https://wa.me/5491123456789" className="whatsapp">
+  <img src={whatsapp4} alt="WhatsApp"className="whatsapp-icon" /> 
+    
+      </a>     */}
+
+<div className="whatsapp-container">
+        
+        <motion.div
+          className="whatsapp-tooltip"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1, duration: 0.5 }}
+        >
+      Chat with us on WhatsApp
+        </motion.div>
+
+        <motion.a
+          href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20start%20a%20project"
+          className="whatsapp-btn"
+          initial={{ scale: 1 }}
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          whileHover={{ scale: 1.15 }}
+        >
+          {/* aqui abajo va la imagen y puedo poner texto tambien */}
+          <img src={whatsapp4} alt="WhatsApp" />
+        </motion.a>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </div>
     </>
