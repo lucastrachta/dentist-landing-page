@@ -4,43 +4,47 @@
 
 import "./App.css";
 import { motion } from "framer-motion";
-import afterdentista from "./assets/afterdentista.jpg";
-import beforedentista from "./assets/beforedentista.jpg";
-import blanqueamientodental from "./assets/blanqueamientodental.jpg";
-import implantedental from "./assets/implantedental.jpg";
-import limpiezadental from "./assets/limpiezadental.jpg";
-import consultoriodentista from "./assets/consultoriodentista.jpg";
-import consultoriodentista2 from "./assets/consultoriodentista2.jpg";
-import whatsapp4 from "./assets/whatsapp4.jpg";
+import after from "./assets/afterdentista.jpg";
+import before from "./assets/beforedentista.jpg";
+import limpieza from "./assets/limpiezadental.jpg";
+import implante from "./assets/implantedental.jpg";
+import whitening from "./assets/blanqueamientodental.jpg";
+import clinic1 from "./assets/consultoriodentista.jpg";
+import clinic2 from "./assets/consultoriodentista2.jpg";
+import whatsapp from "./assets/whatsapp4.jpg";
+
+import sonrisamasfuerte from "./assets/sonrisamasfuerte.jpg";
+import dientesmassaludables from "./assets/dientemassaludable.jpg";
+import after2 from "./assets/after2.jpg";
+import nuestraoficina2 from "./assets/nuestraoficina2.jpg";
+import after3 from "./assets/after3.jpg"; 
+import clinic from "./assets/clinic.jpg";
+ import smile from "./assets/smile.jpg";
+
 
 function App() {
 
-  const services = [
+  const benefits = [
     {
-      title: "Teeth Cleaning",
-      text: "Professional cleaning for a healthy smile",
-      img:  limpiezadental
+      title: "Whiter Smile",
+      text: "Noticeable results in just one session",
+      img: sonrisamasfuerte
     },
     {
-      title: "Whitening",
-      text: "Brighten your smile safely",
-      img: blanqueamientodental
+      title: "Healthy Teeth",
+      text: "Prevent cavities and gum disease",
+      img: dientesmassaludables
     },
     {
-      title: "Dental Implants",
-      text: "Permanent solutions for missing teeth",
-      img: implantedental
+      title: "Permanent Solutions",
+      text: "Dental implants that last for years",
+      img: after2
     }
   ];
 
-  const images = [
-   consultoriodentista,
-    consultoriodentista2
-  ];
-
   const testimonials = [
-    { text: "Amazing service and very professional.", name: "Emma" },
-    { text: "Best dentist I’ve ever visited.", name: "Bill" }
+    { text: "My smile completely changed!", name: "Emily" },
+    { text: "Super professional and painless.", name: "John" }
   ];
 
   return (
@@ -48,218 +52,150 @@ function App() {
       {/* NAV */}
       <nav className="nav">
         <h2>Smile Clinic</h2>
-        <a href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20improve%20my%20website" className="btn">Book Now</a>
+        <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20website%20like%20this" className="btn">
+          Book Now
+        </a>
       </nav>
+|
+      {/* HERO */}
+      <section className="hero">
+        <motion.div className="hero-box">
+          <h1>Get a brighter smile in just 1 visit</h1>
+          <p>Professional dental care trusted by 500+ patients</p>
 
-      <div className="container">
-
-        {/* HERO */}
-        <section className="hero">
-
-<div className="container">
-
-          <motion.div
-            className="hero-box"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1>Get your perfect smile today</h1>
-            <p>Professional dental care for you and your family</p>
-
-            <motion.a
-              href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20improve%20my%20website"
-              className="btn big"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Book Appointment
-            </motion.a>
-          </motion.div>
-
+          <div className="hero-stats">
+            <span>⭐ 4.9 Rating</span>
+            <span>👨‍⚕️ 10+ Years Experience</span>
+            <span>😊 500+ Happy Patients</span>
           </div>
-        </section>
 
-        {/* SERVICES */}
-        <motion.section
-          className="section"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2>Our Services</h2>
+          <span className="hero-badge">
+            Only 3 appointments left this week
+          </span>
+
+          <a href=" https://wa.me/5493705013558?text=Hi%20I%20want%20a%20website%20like%20this" className="btn big">
+            Book Appointment
+          </a>
+        </motion.div>
+      </section>
+
+      {/* BENEFITS */}
+      <section className="section">
+        <div className="container">
+          <h2>How We Help You</h2>
 
           <div className="grid">
-            {services.map((item, i) => (
-              <motion.div
-                key={i}
-                className="card apple"
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
+            {benefits.map((item, i) => (
+              <div key={i} className="card apple">
                 <img src={item.img} />
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.section>
+        </div>
+      </section>
 
-        {/* IMAGES */}
-        <motion.section
-          className="section"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2>Our Clinic</h2>
-
-          <div className="grid">
-            {images.map((img, i) => (
-              <motion.div
-                key={i}
-                className="card apple"
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <img src={img} />
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* TESTIMONIALS */}
-        <motion.section
-          className="section"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2>What Patients Say</h2>
-
-          <div className="grid">
-            {testimonials.map((item, i) => (
-              <motion.div
-                key={i}
-                className="card apple"
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <p>"{item.text}"</p>
-                <span>- {item.name}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* BEFORE AFTER */}
-        <motion.section
-          className="section"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2>Before & After</h2>
+      {/* BEFORE AFTER */}
+      <section className="section">
+        <div className="container">
+          <h2>Real Results</h2>
 
           <div className="grid">
             <div className="card apple">
-              <img src={beforedentista} />
+              <img src={nuestraoficina2} />
               <p>Before</p>
             </div>
 
             <div className="card apple">
-              <img src={afterdentista} />
+              <img src={after3} />
               <p>After</p>
             </div>
           </div>
-        </motion.section>
+        </div>
+      </section>
 
-        {/* CTA */}
-        <motion.section
-          className="cta"
-          id="contact"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2>Need a dental check?</h2>
+      {/* CLINIC */}
+      <section className="section">
+        <div className="container">
+          <h2>Our Clinic</h2>
 
-          <motion.a
-            href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20start%20a%20project"
-            className="btn big"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact Now
-          </motion.a>
-        </motion.section>
+          <div className="grid">
+            {[smile, clinic].map((img, i) => (
+              <div key={i} className="card apple">
+                <img src={img} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* TESTIMONIALS */}
+      <section className="section">
+        <div className="container">
+          <h2>What Patients Say</h2>
 
+          <div className="grid">
+            {testimonials.map((t, i) => (
+              <div key={i} className="card apple">
+                <p>"{t.text}"</p>
+                <span>- {t.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-{/*  
-     <a href="https://wa.me/5491123456789" className="whatsapp">
-  <img src={whatsapp4} alt="WhatsApp"className="whatsapp-icon" /> 
-    
-      </a>     */}
+      {/* OFFER */}
+      <section className="section">
+        <div className="container">
+          <h2>Special Offer</h2>
 
-<div className="whatsapp-container">
-        
-        <motion.div
-          className="whatsapp-tooltip"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
-      Chat with us on WhatsApp
-        </motion.div>
+          <div className="card apple highlight">
+            <h3>Teeth Whitening</h3>
+            <h2>$99</h2>
+            <p>Limited time offer for new patients</p>
 
-        <motion.a
-          href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20start%20a%20project"
-          className="whatsapp-btn"
-          initial={{ scale: 1 }}
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          whileHover={{ scale: 1.15 }}
-        >
-          {/* aqui abajo va la imagen y puedo poner texto tambien */}
-          <img src={whatsapp4} alt="WhatsApp" />
-        </motion.a>
+            <span className="urgency">
+              Only 3 spots left this week
+            </span>
 
-      </div>
+            <a href=" https://wa.me/5493705013558?text=Hi%20I%20want%20a%20website%20like%20this" className="btn">
+              Claim Offer
+            </a>
+          </div>
+        </div>
+      </section>
 
+      {/* GUARANTEE */}
+      <section className="section">
+        <div className="container">
+          <h2>100% Satisfaction Guarantee</h2>
+          <p>If you're not happy, we fix it for free.</p>
+        </div>
+      </section>
 
+      {/* CTA */}
+      <section className="cta">
+        <div className="container">
+          <h2>Ready for your new smile?</h2>
+          <p>Book your appointment today</p>
 
+          <a href=" https://wa.me/5493705013558?text=Hi%20I%20want%20a%20website%20like%20this" className="btn big, boton">
+            Book Now
+          </a>
+        </div>
+      </section>
 
+      {/* WHATSAPP */}
+      <div className="whatsapp-container">
+        <div className="whatsapp-tooltip">
+          Chat with us
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
+        <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20website%20like%20this" className="whatsapp-btn">
+          <img src={whatsapp} />
+        </a>
       </div>
     </>
   );
@@ -272,230 +208,229 @@ export default App;
 
 
 
-
-
-//codigo de la pagina dentista que fui haciendo yo con la ia y
-//  arriba esta el jsx completo que hizo la ia
+//JSX QUE SUBI A VERCEL HECHO POR MI Y LA IA PERO AHORA LA COMENTO PORQUE ENCONTRE
+// OTRO APP.JSX HECHO SOLO POR IA MAS LINDO Y ESE LO SUBI A VERCEL
 
 // import "./App.css";
 // import { motion } from "framer-motion";
-
+// import afterdentista from "./assets/afterdentista.jpg";
+// import beforedentista from "./assets/beforedentista.jpg";
+// import blanqueamientodental from "./assets/blanqueamientodental.jpg";
+// import implantedental from "./assets/implantedental.jpg";
+// import limpiezadental from "./assets/limpiezadental.jpg";
+// import consultoriodentista from "./assets/consultoriodentista.jpg";
+// import consultoriodentista2 from "./assets/consultoriodentista2.jpg";
+// import whatsapp4 from "./assets/whatsapp4.jpg";
 
 // function App() {
-//   return (
-//     <div className="container">
 
+//   const services = [
+//     {
+//       title: "Teeth Cleaning",
+//       text: "Professional cleaning to keep your smile healthy and fresh",
+//       img: limpiezadental
+//     },
+//     {
+//       title: "Whitening",
+//       text: "Get a brighter, whiter smile in just one visit",
+//       img: blanqueamientodental
+//     },
+//     {
+//       title: "Dental Implants",
+//       text: "Permanent solution to restore your confidence",
+//       img: implantedental
+//     }
+//   ];
+
+//   return (
+//     <>
 //       {/* NAV */}
 //       <nav className="nav">
 //         <h2>Smile Clinic</h2>
-//         <a href="#contact" className="btn">Book Now</a>
+//         <a href="https://wa.me/5493705013558" className="btn">
+//           Book Now
+//         </a>
 //       </nav>
 
-//       {/* HERO
-//       <section className="hero">
-//         <div className="hero-box">
-//           <h1>Get your perfect smile today</h1>
-//           <p>Professional dental care for you and your family</p>
-//           <a href="https://wa.me/5491123456789" className="btn big">
-//             Book Appointment
+//       <div className="container">
+
+
+
+
+
+
+//         {/* HERO */}
+//         <section className="hero">
+//           <motion.div
+//             className="hero-box"
+//             initial={{ opacity: 0, y: 40 }}
+//             animate={{ opacity: 1, y: 0 }}
+//           >
+//             <h1 className="heading-xl">
+//               Get Your Perfect Smile Today
+//             </h1>
+
+//             <p className="subheading">
+//               Modern dental care designed to give you confidence and results
+//             </p>
+
+//             <span className="hero-urgency">
+//               Limited appointments available this week
+//             </span>
+
+//             <a href="https://wa.me/5493705013558" className="btn btn-primary">
+//               Book Appointment
+//             </a>
+//           </motion.div>
+//         </section>
+
+//         {/* SERVICES */}
+//         <section className="section">
+//           <h2 className="heading-lg">Our Services</h2>
+
+//           <div className="grid">
+//             {services.map((item, i) => (
+//               <motion.div
+//                 key={i}
+//                 className="card premium"
+//                 whileHover={{ y: -5 }}
+//               >
+//                 <img src={item.img} />
+//                 <h3 className="heading-md">{item.title}</h3>
+//                 <p>{item.text}</p>
+
+//                 <a href="https://wa.me/5493705013558" className="btn small">
+//                   Book Now
+//                 </a>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </section>
+
+//         {/* BEFORE AFTER */}
+//         <section className="section">
+//           <h2 className="heading-lg">Real Results</h2>
+
+//           <div className="grid">
+//             <div className="card premium">
+//               <img src={beforedentista} />
+//               <p>Before</p>
+//             </div>
+
+//             <div className="card premium">
+//               <img src={afterdentista} />
+//               <p>After</p>
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* CLINIC */}
+//         <section className="section">
+//           <h2 className="heading-lg">Our Clinic</h2>
+
+//           <div className="grid">
+//             <div className="card premium">
+//               <img src={consultoriodentista} />
+//             </div>
+
+//             <div className="card premium">
+//               <img src={consultoriodentista2} />
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* TESTIMONIALS */}
+//         <section className="section">
+//           <h2 className="heading-lg">What Patients Say</h2>
+
+//           <div className="grid">
+//             <div className="card premium">
+//               <p>"Amazing service and very professional."</p>
+//               <span>- Emma</span>
+//             </div>
+
+//             <div className="card premium">
+//               <p>"Best dentist I’ve ever visited."</p>
+//               <span>- Bill</span>
+//             </div>
+//           </div>
+//         </section>
+
+
+
+// {/* OFFER / PRICING */}
+// <section className="section offer">
+
+//   <h2 className="heading-lg">
+//     Affordable Dental Care
+//   </h2>
+
+//   <p className="subheading">
+//     High-quality treatment at a price you can afford
+//   </p>
+
+//   <div className="offer-box">
+
+//     <span className="offer-badge">
+//       Limited spots this week
+//     </span>
+
+//     <h3 className="offer-price">
+//       Free Consultation
+//     </h3>
+
+//     <p className="offer-desc">
+//       Get a professional evaluation and personalized treatment plan
+//     </p>
+
+//     <ul className="offer-list">
+//       <li>✔ Full dental check</li>
+//       <li>✔ Personalized plan</li>
+//       <li>✔ No commitment</li>
+//     </ul>
+
+//     <a
+//       href="https://wa.me/5493705013558"
+//       className="btn btn-primary big"
+//     >
+//       Book Your Free Visit
+//     </a>
+
+//   </div>
+
+// </section>
+
+
+
+
+
+
+//         {/* CTA */}
+//         <section className="cta">
+//           <h2 className="heading-lg">
+//             Ready to improve your smile?
+//           </h2>
+
+//           <a href="https://wa.me/5493705013558" className="btn btn-primary big">
+//             Contact Now
 //           </a>
+//         </section>
+
+//         {/* WHATSAPP */}
+//         <div className="whatsapp-container">
+
+//           <div className="whatsapp-tooltip">
+//             Chat with us
+//           </div>
+
+//           <a href="https://wa.me/5493705013558" className="whatsapp-btn">
+//             <img src={whatsapp4} />
+//           </a>
+
 //         </div>
-//       </section> */}
 
-// <section className="hero">
-//   <motion.div
-//     className="hero-box"
-//     initial={{ opacity: 0, y: 40 }}
-//     animate={{ opacity: 1, y: 0 }}
-//     transition={{ duration: 0.8 }}
-//   >
-//     <h1>Get your perfect smile today</h1>
-//     <p>Professional dental care for you and your family</p>
-
-//     <motion.a
-//       href="https://wa.me/5491123456789"
-//       className="btn big"
-//       whileHover={{ scale: 1.05 }}
-//       whileTap={{ scale: 0.95 }}
-//     >
-//       Book Appointment
-//     </motion.a>
-//   </motion.div>
-// </section>
-
-
-
-//       {/* SERVICES
-//       <section className="section">
-//         <h2>Our Services</h2>
-
-//         <div className="grid">
-//           <div className="card">
-//             <h3>Teeth Cleaning</h3>
-//             <p>Professional cleaning for a healthy smile</p>
-//           </div>
-
-//           <div className="card">
-//             <h3>Whitening</h3>
-//             <p>Brighten your smile safely</p>
-//           </div>
-
-//           <div className="card">
-//             <h3>Dental Implants</h3>
-//             <p>Permanent solutions for missing teeth</p>
-//           </div>
-//         </div>
-//       </section> */}
-
-
-// <section className="section">
-//   <h2>Our Services</h2>
-
-//   <div className="grid">
-//     {[ 
-//       { title: "Teeth Cleaning", text: "Professional cleaning for a healthy smile" },
-//       { title: "Whitening", text: "Brighten your smile safely" },
-//       { title: "Dental Implants", text: "Permanent solutions for missing teeth" }
-//     ].map((item, i) => (
-//       <motion.div
-//         key={i}
-//         className="card apple"
-//         initial={{ opacity: 0, y: 50 }}
-//         whileInView={{ opacity: 1, y: 0 }}
-//         whileHover={{ scale: 1.05 }}
-//         whileTap={{ scale: 0.95 }}
-//         transition={{ duration: 0.5, delay: i * 0.2 }}
-//         viewport={{ once: true }}
-//       >
-//         <h3>{item.title}</h3>
-//         <p>{item.text}</p>
-//       </motion.div>
-//     ))}
-//   </div>
-// </section>
-
-
-
-
-//       {/* IMAGES 
-//       <section className="section">
-//         <h2>Our Clinic</h2>
-
-//         <div className="grid">
-//           <div className="card">
-//             <img src="https://images.unsplash.com/photo-1588776814546-ec7e0c47d55e" />
-//           </div>
-
-//           <div className="card">
-//             <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" />
-//           </div>
-//         </div>
-//       </section>*/}
-
-
-// <section className="section">
-//   <h2>Our Clinic</h2>
-
-//   <div className="grid">
-//     {[
-//       "https://images.unsplash.com/photo-1588776814546-ec7e0c47d55e",
-//       "https://images.unsplash.com/photo-1606813907291-d86efa9b94db"
-//     ].map((img, i) => (
-//       <motion.div
-//         key={i}
-//         className="card apple"
-//         initial={{ opacity: 0, y: 50 }}
-//         whileInView={{ opacity: 1, y: 0 }}
-//         whileHover={{ scale: 1.05 }}
-//         whileTap={{ scale: 0.95 }}
-//         transition={{ duration: 0.5, delay: i * 0.2 }}
-//         viewport={{ once: true }}
-//       >
-//         <img src={img} />
-//       </motion.div>
-//     ))}
-//   </div>
-// </section>
-
-
-
-//       {/* TESTIMONIALS 
-//       <section className="section">
-//         <h2>What Patients Say</h2>
-
-//         <div className="grid">
-//           <div className="card">
-//             <p>"Amazing service and very professional."</p>
-//             <span>- Maria</span>
-//           </div>
-
-//           <div className="card">
-//             <p>"Best dentist I’ve ever visited."</p>
-//             <span>- John</span>
-//           </div>
-//         </div>
-//       </section>*/}
-
-// <section className="section">
-//   <h2>What Patients Say</h2>
-
-//   <div className="grid">
-//     {[
-//       { text: "Amazing service and very professional.", name: "Maria" },
-//       { text: "Best dentist I’ve ever visited.", name: "John" }
-//     ].map((item, i) => (
-//       <motion.div
-//         key={i}
-//         className="card apple"
-//         initial={{ opacity: 0, y: 50 }}
-//         whileInView={{ opacity: 1, y: 0 }}
-//         whileHover={{ scale: 1.05 }}
-//         whileTap={{ scale: 0.95 }}
-//         transition={{ duration: 0.5, delay: i * 0.2 }}
-//         viewport={{ once: true }}
-//       >
-//         <p>"{item.text}"</p>
-//         <span>- {item.name}</span>
-//       </motion.div>
-//     ))}
-//   </div>
-// </section>
-
-
-
-
-//       {/* CTA 
-//       <section className="cta" id="contact">
-//         <h2>Need a dental check?</h2>
-//         <a href="https://wa.me/5491123456789" className="btn big">
-//           Contact Now
-//         </a>
-//       </section>*/}
-
-
-// <section className="cta" id="contact">
-//   <motion.div
-//     initial={{ opacity: 0, scale: 0.9 }}
-//     whileInView={{ opacity: 1, scale: 1 }}
-//     transition={{ duration: 0.6 }}
-//     viewport={{ once: true }}
-//   >
-//     <h2>Need a dental check?</h2>
-
-//     <motion.a
-//       href="https://wa.me/5491123456789"
-//       className="btn big"
-//       whileHover={{ scale: 1.05 }}
-//       whileTap={{ scale: 0.95 }}
-//     >
-//       Contact Now
-//     </motion.a>
-//   </motion.div>
-// </section>
-
-
-
-//     </div>
+//       </div>
+//     </>
 //   );
 // }
 
