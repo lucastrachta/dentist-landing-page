@@ -276,6 +276,79 @@ html, body {
 /* ///////////////// */
 
 .boton {
-  background: linear-gradient(90deg, #a282ae, #ad49b0);
+  color: #fff;opacity: 0.9;
+  background:  #0ea5e9;
   border: #89448f ;
+}
+
+/* css benefits */
+.center {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.benefits li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* cta */
+.cta-note {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* espaciado letras del hero */
+.hero-box h1 {
+  line-height: 0.6;
+  margin-bottom: 15px;
+}
+
+.hero-box p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-stats {
+  margin-bottom: 20px;
+}
+
+/* CSS CONTACTO */
+.contact-pro h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-info {
+  max-width: 350px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.contact-info .btn {
+  margin-top: 15px;
+}
+
+.contact-map {
+  max-width: 400px;
+  width: 100%;
 }

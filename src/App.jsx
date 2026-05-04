@@ -20,6 +20,7 @@ import nuestraoficina2 from "./assets/nuestraoficina2.jpg";
 import after3 from "./assets/after3.jpg"; 
 import clinic from "./assets/clinic.jpg";
  import smile from "./assets/smile.jpg";
+ import beforedentista4 from "./assets/beforedentista4.png";
 
 
 function App() {
@@ -56,33 +57,47 @@ function App() {
           Book Now
         </a>
       </nav>
-|
+
       {/* HERO */}
       <section className="hero">
         <motion.div className="hero-box">
-          <h1>Get a brighter smile in just 1 visit</h1>
-          <p>Professional dental care trusted by 500+ patients</p>
+          <h1>Fix your smile in just 1 visit — or we fix it for free</h1>
 
-          <div className="hero-stats">
-            <span>⭐ 4.9 Rating</span>
-            <span>👨‍⚕️ 10+ Years Experience</span>
-            <span>😊 500+ Happy Patients</span>
-          </div>
+<p>
+  Trusted by 500+ patients. Fast, painless and professional dental care.
+</p>
 
-          <span className="hero-badge">
-            Only 3 appointments left this week
-          </span>
+<span className="hero-badge">
+   Only 3 appointments left this week
+</span>
 
-          <a href=" https://wa.me/5493705013558?text=Hi%20I%20want%20a%20website%20like%20this" className="btn big">
-            Book Appointment
-          </a>
+<a href="https://wa.me/5493705013558?text=I%20want%20to%20fix%20my%20smile" className="btn big">
+  Book My Appointment Now
+</a>
         </motion.div>
       </section>
+
+
+<section className="section">
+  <div className="container">
+    <div className="card apple center">
+      <h2>Why Choose Our Clinic?</h2>
+
+     <ul className="benefits">
+  <li>😊 Smile with confidence again</li>
+  <li>🦷 Pain-free treatments with modern technology</li>
+  <li>⚡ Fast results from your first visit</li>
+</ul>
+    </div>
+  </div>
+</section>
+
+
 
       {/* BENEFITS */}
       <section className="section">
         <div className="container">
-          <h2>How We Help You</h2>
+          <h2>Our Services</h2>
 
           <div className="grid">
             {benefits.map((item, i) => (
@@ -103,7 +118,7 @@ function App() {
 
           <div className="grid">
             <div className="card apple">
-              <img src={nuestraoficina2} />
+              <img src={beforedentista4} />
               <p>Before</p>
             </div>
 
@@ -148,23 +163,22 @@ function App() {
 
       {/* OFFER */}
       <section className="section">
-        <div className="container">
-          <h2>Special Offer</h2>
+      
+<h3>Teeth Whitening</h3>
+<h2>$99</h2>
 
-          <div className="card apple highlight">
-            <h3>Teeth Whitening</h3>
-            <h2>$99</h2>
-            <p>Limited time offer for new patients</p>
+<p>
+  Get a visibly whiter smile in just one session.
+</p>
 
-            <span className="urgency">
-              Only 3 spots left this week
-            </span>
+<span className="urgency">
+  ✅ Only 3 spots available this week
+</span>
 
-            <a href=" https://wa.me/5493705013558?text=Hi%20I%20want%20a%20website%20like%20this" className="btn">
-              Claim Offer
-            </a>
-          </div>
-        </div>
+<a href="https://wa.me/5493705013558?text=I%20want%20the%20whitening%20offer" className="btn">
+  Claim My Spot Now
+</a>
+             
       </section>
 
       {/* GUARANTEE */}
@@ -176,16 +190,66 @@ function App() {
       </section>
 
       {/* CTA */}
-      <section className="cta">
-        <div className="container">
-          <h2>Ready for your new smile?</h2>
-          <p>Book your appointment today</p>
+      
+<section className="cta">
+  <div className="container">
 
-          <a href=" https://wa.me/5493705013558?text=Hi%20I%20want%20a%20website%20like%20this" className="btn big, boton">
-            Book Now
-          </a>
-        </div>
-      </section>
+    <h2>Don’t wait to fix your smile</h2>
+
+    <p>
+      Only 3 appointments left this week. Book now and get your first consultation free.
+    </p>
+
+    <a 
+      href="https://wa.me/5493705013558?text=I%20want%20to%20book%20now"
+      className="btn big boton"
+    >
+      Book My Appointment Now
+    </a>
+
+    <span className="cta-note">
+      ⚠️ Appointments fill fast — secure yours now
+    </span>
+
+  </div>
+</section>
+
+<section className="section contact-pro">
+  <div className="container">
+    <h2>Contact Us</h2>
+
+    <div className="contact-grid">
+
+      {/* INFO */}
+      <div className="card apple contact-info">
+        <p>📍 Address: Av. Siempre Viva 123</p>
+        <p>📞 Phone: +54 9 11 1234-5678</p>
+        <p>🕐 Hours: Mon - Fri 9:00 - 18:00</p>
+
+        <a
+          href="https://wa.me/5493705013558?text=I%20want%20to%20book%20an%20appointment"
+          className="btn"
+        >
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      {/* MAPA */}
+      <div className="card apple contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=..."
+          width="100%"
+          height="250"
+          style={{ border: 0 }}
+          loading="lazy"
+          title="map"
+        ></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       {/* WHATSAPP */}
       <div className="whatsapp-container">
