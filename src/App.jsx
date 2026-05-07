@@ -52,8 +52,8 @@ function App() {
     <>
       {/* NAV */}
       <nav className="nav">
-        <h2>Smile Clinic</h2>
-        <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20website%20like%20this" className="btn">
+        <h2 >Smile Clinic</h2>
+        <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20website%20like%20this" className="btn btnx">
           Book Now
         </a>
       </nav>
@@ -214,6 +214,7 @@ function App() {
   </div>
 </section>
 
+
 <section className="section contact-pro">
   <div className="container">
     <h2>Contact Us</h2>
@@ -221,6 +222,56 @@ function App() {
     <div className="contact-grid">
 
       {/* INFO */}
+      <div className="card apple contact-info">
+        <h3>Visit Our Clinic</h3>
+
+        <p>📍 1560 Broadway, New York, NY 10036</p>
+        <p>📞 +1 (212) 555-1234</p>
+        <p>🕐 Mon - Fri 9:00 AM - 6:00 PM</p>
+
+        <div className="contact-buttons">
+          <a
+            href="https://wa.me/12125551234?text=I%20want%20to%20book%20an%20appointment"
+            className="btn btnprimary"
+          >
+            Chat on WhatsApp
+          </a>
+
+          <a
+            href="https://www.google.com/maps?q=1560+Broadway+New+York"
+            target="_blank"
+            className="btn secondary"
+          >
+            Open in Maps
+          </a>
+        </div>
+      </div>
+
+      {/* MAPA */}
+      <div className="card apple contact-map">
+        <iframe
+          src="https://www.google.com/maps?q=1560+Broadway+New+York&output=embed"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="map"
+        ></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+{/* CONTACT *
+<section className="section contact-pro">
+  <div className="container">
+    <h2>Contact Us</h2>
+
+    <div className="contact-grid">
+
+      {/* INFO *
       <div className="card apple contact-info">
         <p>📍 Address: Av. Siempre Viva 123</p>
         <p>📞 Phone: +54 9 11 1234-5678</p>
@@ -234,7 +285,7 @@ function App() {
         </a>
       </div>
 
-      {/* MAPA */}
+      {/* MAPA *
       <div className="card apple contact-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=..."
