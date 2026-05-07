@@ -226,7 +226,7 @@ function App() {
         <h3>Visit Our Clinic</h3>
 
         <p>📍 1560 Broadway, New York, NY 10036</p>
-        <p>📞 +1 (212) 555-1234</p>
+        <p>📞 +1 (212) 555-1243</p>
         <p>🕐 Mon - Fri 9:00 AM - 6:00 PM</p>
 
         <div className="contact-buttons">
